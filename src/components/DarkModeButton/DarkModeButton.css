@@ -1,0 +1,56 @@
+/* Default Light Mode */
+body {
+    background-color: aliceblue;
+    color: black;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Dark Mode with Shades of Grey */
+  .dark-mode {
+    background-color: #2e2e2e; /* Dark Grey */
+    color: #e0e0e0;
+  }
+  
+  /* Button Styling */
+  .dark-mode-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #4a4a4a, #6a6a6a);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s, color 0.3s ease;
+  }
+  
+  .dark-mode-button:hover {
+    background: linear-gradient(to right, #5a5a5a, #7a7a7a);
+    transform: scale(1.05);
+  }
+  
+  /* Light Mode Button (When Dark Mode is Active) */
+  .dark-mode-button.light-mode {
+    background: white;
+    color: black;
+    border: 1px solid #ddd;
+  }
+  
+  .dark-mode-button.light-mode:hover {
+    background: #f5f5f5;
+  }
+  
+  /* Accordion Styles in Dark Mode */
+  .dark-mode .accordion-header {
+    background: linear-gradient(to right, #555, #777);
+    color: white;
+  }
+  
+  .dark-mode .accordion-content {
+    background-color: #3a3a3a;
+    color: #ddd;
+  }
+  
+  .dark-mode .accordion {
+    border: 1px solid #555;
+  }
+  

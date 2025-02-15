@@ -1,0 +1,37 @@
+.accordion-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+}
+
+.accordion-content {
+  padding: 15px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  color: black;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.icon.open {
+  transform: rotate(180deg);
+}
