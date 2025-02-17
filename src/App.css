@@ -11,10 +11,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: aliceblue; */
+  
+  padding: 20px;
 }
 
-.card-container {
-  display: flex;
-  gap: 20px; /* ✅ Adds space between cards */
+.cart-container {
+  margin-top: 20px;
 }
