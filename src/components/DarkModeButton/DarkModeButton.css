@@ -1,56 +1,158 @@
+/* Notes.css */
+
 /* Default Light Mode */
 body {
-    background-color: aliceblue;
-    color: black;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
-  
-  /* Dark Mode with Shades of Grey */
-  .dark-mode {
-    background-color: #2e2e2e; /* Dark Grey */
-    color: #e0e0e0;
-  }
-  
-  /* Button Styling */
-  .dark-mode-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background: linear-gradient(to right, #4a4a4a, #6a6a6a);
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s ease, transform 0.2s, color 0.3s ease;
-  }
-  
-  .dark-mode-button:hover {
-    background: linear-gradient(to right, #5a5a5a, #7a7a7a);
-    transform: scale(1.05);
-  }
-  
-  /* Light Mode Button (When Dark Mode is Active) */
-  .dark-mode-button.light-mode {
-    background: white;
-    color: black;
-    border: 1px solid #ddd;
-  }
-  
-  .dark-mode-button.light-mode:hover {
-    background: #f5f5f5;
-  }
-  
-  /* Accordion Styles in Dark Mode */
-  .dark-mode .accordion-header {
-    background: linear-gradient(to right, #555, #777);
-    color: white;
-  }
-  
-  .dark-mode .accordion-content {
-    background-color: #3a3a3a;
-    color: #ddd;
-  }
-  
-  .dark-mode .accordion {
-    border: 1px solid #555;
-  }
-  
+  background-color: aliceblue;
+  color: black;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 80%; /* Adjust width as needed */
+  margin: 20px auto;
+  background-color: #fff; /* Light mode background */
+  color: #333; /* Light mode text color */
+}
+
+.notes-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  background-color: #4CAF50; /* Green in light mode */
+  color: white;
+  transition: background 0.3s ease; /* Smooth transition */
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  justify-content: center;
+}
+
+.note-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  background-color: #fff; /* Light mode card background */
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s, box-shadow 0.3s;
+}
+
+.note-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.note-content {
+  margin-bottom: 30px;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+}
+
+.note-date {
+  font-size: smaller;
+  color: #777;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transition: color 0.3s ease;
+}
+
+.remove-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #f44336;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+
+/* Dark Mode with Shades of Grey */
+.dark-mode {
+  background-color: #2e2e2e; /* Dark Grey */
+  color: #e0e0e0;
+}
+
+.dark-mode .notes-container {
+  background-color: #3a3a3a; /* Darker container background */
+  color: #e0e0e0; /* Light text for dark mode */
+  border-color: #555; /* Darker border */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* More prominent shadow */
+}
+
+.dark-mode .notes-container button {
+  background: linear-gradient(to right, #4a4a4a, #6a6a6a); /* Darker button */
+  color: white;
+}
+
+.dark-mode .note-card {
+  background-color: #444; /* Darker card background */
+  border-color: #555; /* Darker card border */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Darker card shadow */
+}
+
+.dark-mode .note-title {
+  color: #ddd; /* Lighter title text */
+}
+
+.dark-mode .note-content {
+  color: #ddd; /* Lighter content text */
+}
+
+
+.dark-mode .note-date {
+  color: #999; /* Slightly lighter date text */
+}
+
+.dark-mode .remove-icon {
+  color: #f00; /* Red remove icon, adjust as needed */
+}
+
+
+/* Button Styling */
+.dark-mode-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, #4a4a4a, #6a6a6a); /* Darker button */
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s, color 0.3s ease;
+}
+
+.dark-mode-button:hover {
+  background: linear-gradient(to right, #5a5a5a, #7a7a7a);
+  transform: scale(1.05);
+}
+
+/* Light Mode Button (When Dark Mode is Active) */
+.dark-mode-button.light-mode {
+  background: white;
+  color: black;
+  border: 1px solid #ddd;
+}
+
+.dark-mode-button.light-mode:hover {
+  background: #f5f5f5;
+}

@@ -1,0 +1,214 @@
+/* 🎨 General Styles */
+.todo-container {
+    width: 420px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 🌞 Light Mode - Vibrant Gradient Theme */
+    .todo-container {
+    background-color: rgba(0, 0, 0, 0.1) ;
+  }
+  
+    .todo-title {
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+    .todo-input {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+  }
+  
+    .todo-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+    .todo-item {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+  }
+  
+    .edit-input {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  
+    .add-btn {
+    background: linear-gradient(135deg, #ff4e50, #fc913a);
+  }
+  
+    .add-btn:hover {
+    background: linear-gradient(135deg, #e62928, #e36d12);
+  }
+  
+  /* 🌙 Dark Mode - Shades of Grey */
+  .dark-mode .todo-container {
+    background: linear-gradient(135deg, #2b2b2b, #1e1e1e);
+    border: 1px solid #3a3a3a;
+  }
+  
+  .dark-mode .todo-title {
+    color: #f1f1f1;
+  }
+  
+  .dark-mode .todo-input {
+    background: linear-gradient(135deg, #444, #333);
+    color: #f1f1f1;
+    border: 1px solid #555;
+  }
+  
+  .dark-mode .todo-input::placeholder {
+    color: rgba(200, 200, 200, 0.7);
+  }
+  
+  .dark-mode .todo-item {
+    background: linear-gradient(135deg, #3a3a3a, #2b2b2b);
+    color: #f1f1f1;
+  }
+  
+  .dark-mode .edit-input {
+    background: #444;
+    color: #f1f1f1;
+  }
+  
+  /* 📝 Title */
+  .todo-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* 📥 Input & Button */
+  .input-container {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .todo-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .add-btn {
+    padding: 10px 12px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .add-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* 📌 Task List */
+  .todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  /* 🗂 Task Item */
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .todo-item span {
+    flex: 1;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* 🎭 Buttons */
+  .btn-container {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .remove-btn,
+  .edit-btn,
+  .save-btn {
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: transparent;
+  }
+  
+  /* ❌ Remove Button */
+  .remove-btn {
+    color: red;
+  }
+  
+  .remove-btn:hover {
+    color: darkred;
+  }
+  
+  /* ✏️ Edit Button */
+  .edit-btn {
+    color: #007bff;
+  }
+  
+  .edit-btn:hover {
+    color: #0056b3;
+  }
+  
+  /* 💾 Save Button */
+  .save-btn {
+    color: green;
+  }
+  
+  .save-btn:hover {
+    color: darkgreen;
+  }
+  
+  /* ✏️ Edit Input */
+  .edit-input {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  /* 🌙 Dark Mode Toggle */
+  .dark-mode-toggle {
+    background: linear-gradient(135deg, #444, #222);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: 0.3s;
+  }
+  
+  .dark-mode-toggle:hover {
+    background: linear-gradient(135deg, #666, #333);
+  }
+  

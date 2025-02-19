@@ -2,6 +2,9 @@ import "./App.css";
 import Accordion from "./components/Accordion/Accordion";
 import DarkModeButton from "./components/DarkModeButton/DarkModeButton";
 import CartItem from "./components/CartItem/CartItem";
+import ToDoApp from "./components/ToDoApp/ToDoApp";
+import Notes from "./components/Notes/Notes"; // Import the Notes component
+
 
 function App() {
   const accordionItems = [
@@ -22,12 +25,19 @@ function App() {
       {/* <Accordion items={accordionItems} /> */}
       
       {/* Cart Section */}
-      <div className="cart-container">
+      {/* <div className="cart-container">
         {cartItems.map((item, index) => (
           <CartItem key={index} item={item} />
         ))}
-      </div>
+      </div> */}
+
+    {/* <ToDoApp /> */}
+
+    <Notes />    {/* Notes Component */}
+
     </div>
+
+
   );
 }
 
