@@ -58,8 +58,8 @@
     background-color: #fff; /* Light mode card background */
 }
 
-.notes-container.dark-mode .note-card {
-    background-color: #444; /* Dark mode card background */
+.dark-mode .notes-container .note-card {
+    background: linear-gradient(to right, #484848, #2c3e50)!important ;/* Dark mode card background */
     border-color: #555;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -69,7 +69,7 @@
     margin-bottom: 10px;
 }
 
-.notes-container.dark-mode .note-title {
+.dark-mode  .notes-container .note-title {
     color: #ddd;
 }
 
@@ -86,8 +86,9 @@
     left: 10px;
 }
 
-.notes-container.dark-mode .note-date {
-    color: #999;
+
+.dark-mode .notes-container .note-date {
+    color: wheat;
 }
 
 .remove-icon {
@@ -99,6 +100,6 @@
     font-size: 20px;
 }
 
-.notes-container.dark-mode .remove-icon {
+.dark-mode .notes-container .remove-icon {
     color: #f00; /* Adjust as needed */
 }

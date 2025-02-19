@@ -9,13 +9,12 @@ const Notes = () => {
             id: 1,
             title: "This is Docket note.",
             content: "The beginning of screenless design: UI jobs to be taken over by Solution Architect",
-            date: "May 21, 2020",
-            color: getRandomColor()
+            date: "May 21, 2024",
         },
         // Add more initial notes here if you like
     ]);
 
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(false); // Local state for dark mode
 
     useEffect(() => {
         if (darkMode) {
@@ -28,21 +27,22 @@ const Notes = () => {
     const handleAddNote = () => {
         const title = prompt("Enter note title:");
         const content = prompt("Enter note content:");
-
+    
         if (title && content) {
+            const newNote = {
+                id: Date.now(),
+                title,
+                content,
+                date: new Date().toLocaleDateString()
+            };
+            
+    
             setNotes([
                 ...notes,
-                {
-                    id: Date.now(),
-                    title,
-                    content,
-                    date: new Date().toLocaleDateString(),
-                    color: getRandomColor()
-                }
+                newNote
             ]);
         }
     };
-
     const handleRemoveNote = (id) => {
         setNotes(notes.filter((note) => note.id !== id));
     };
@@ -54,14 +54,15 @@ const Notes = () => {
         return `rgba(${r}, ${g}, ${b}, 0.8)`;
     }
 
+
     return (
         <div className="notes-container">
             <h1>Notes</h1>
-            {/* <DarkModeButton setDarkMode={setDarkMode} darkMode={darkMode} /> */}
+            
             <button onClick={handleAddNote}>Add Note</button>
             <div className="notes-grid">
                 {notes.map((note) => (
-                    <div key={note.id} className="note-card" style={{ backgroundColor: note.color }}>
+                   <div key={note.id} className="note-card" style={{ backgroundColor: getRandomColor() }}>
                         <div className="note-title">{note.title}</div>
                         <div className="note-content">{note.content}</div>
                         <div className="note-date">{note.date}</div>
