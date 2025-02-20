@@ -1,13 +1,5 @@
 /* PropertyCard.css */
-.property-card-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    padding: 40px; /* Add padding around the card */
-    background-color: #f0f8ff; /* Light background for the container */
-    min-height: 100vh; /* Ensure the container takes full viewport height */
-    align-items: center; /* Center vertically */
-    padding: 1rem;
-  }
+
   
   body.dark-mode .property-card-container {
     background-color: #121212; /* Dark background for the container */
@@ -26,7 +18,8 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    
+    padding-top: 0%;
+    padding-bottom: 0%;
     
   }
   
@@ -37,7 +30,7 @@
   
   .image-container {
     width: 150px;
-    height: 150px;
+    height: 130px;
     overflow: hidden;
     border-radius: .5rem;
    

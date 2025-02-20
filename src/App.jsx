@@ -40,6 +40,8 @@ function App() {
 
       {/* Notes Component */}
       {/* <Notes />    */}
+      
+      <div className="property-card-container">
 
       <PropertyCard
         imageUrl="./src/assets/PropertyCard.avif"
@@ -47,6 +49,21 @@ function App() {
         priceRange="$280k - $310k"
         score={85}
       />
+      <PropertyCard
+        imageUrl="./src/assets/PropertyCard.avif"
+        address="123 Main St, Phoenix, AZ, USA"
+        priceRange="$280k - $310k"
+        score={85}
+      />
+      <PropertyCard
+        imageUrl="./src/assets/PropertyCard.avif"
+        address="123 Main St, Phoenix, AZ, USA"
+        priceRange="$280k - $310k"
+        score={85}
+      />
+
+      </div>
+      
 
 
     </div>
