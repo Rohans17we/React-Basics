@@ -4,6 +4,7 @@ import DarkModeButton from "./components/DarkModeButton/DarkModeButton";
 import CartItem from "./components/CartItem/CartItem";
 import ToDoApp from "./components/ToDoApp/ToDoApp";
 import Notes from "./components/Notes/Notes"; // Import the Notes component
+import PropertyCard from "./components/PropertyCard/PropertyCard";
 
 
 function App() {
@@ -22,18 +23,31 @@ function App() {
   return (
     <div className="app">
       <DarkModeButton />
+
+
       {/* <Accordion items={accordionItems} /> */}
       
-      {/* Cart Section */}
+
+      {/* CART SECTION */}
       {/* <div className="cart-container">
         {cartItems.map((item, index) => (
           <CartItem key={index} item={item} />
         ))}
       </div> */}
 
-    {/* <ToDoApp /> */}
 
-    <Notes />    {/* Notes Component */}
+      {/* <ToDoApp /> */}
+
+      {/* Notes Component */}
+      {/* <Notes />    */}
+
+      <PropertyCard
+        imageUrl="./src/assets/PropertyCard.avif"
+        address="123 Main St, Phoenix, AZ, USA"
+        priceRange="$280k - $310k"
+        score={85}
+      />
+
 
     </div>
 

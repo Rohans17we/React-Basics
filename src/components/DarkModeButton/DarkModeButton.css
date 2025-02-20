@@ -131,6 +131,7 @@ body {
 
 /* Button Styling */
 .dark-mode-button {
+  margin-bottom: 20px;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;

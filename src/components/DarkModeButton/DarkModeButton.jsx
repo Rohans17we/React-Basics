@@ -19,6 +19,7 @@ const DarkModeButton = () => {
     >
       {darkMode ? "Light Mode" : "Dark Mode"}
     </button>
+  
   );
 };
 
