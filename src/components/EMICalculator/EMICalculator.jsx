@@ -47,6 +47,7 @@ const EMICalculator = () => {
           <div className="input-group">
             <label>Loan term</label>
             <select value={loanTerm} onChange={(e) => setLoanTerm(parseInt(e.target.value))}>
+              <option value={10}>10-yr fixed</option>
               <option value={15}>15-yr fixed</option>
               <option value={30}>30-yr fixed</option>
             </select>
