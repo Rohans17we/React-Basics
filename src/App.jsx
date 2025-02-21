@@ -1,11 +1,12 @@
 import "./App.css";
+import React, { useState } from 'react';
 import Accordion from "./components/Accordion/Accordion";
 import DarkModeButton from "./components/DarkModeButton/DarkModeButton";
 import CartItem from "./components/CartItem/CartItem";
 import ToDoApp from "./components/ToDoApp/ToDoApp";
 import Notes from "./components/Notes/Notes"; // Import the Notes component
 import PropertyCard from "./components/PropertyCard/PropertyCard";
-
+import DynamicPropertyCard from "./components/DynamicPropertyCard/DynamicPropertyCard";
 
 function App() {
   const accordionItems = [
@@ -19,6 +20,12 @@ function App() {
     { name: "A FANCY ITEM", quantity: 1, price: 12.84 },
     { name: "A FINE ITEM", quantity: 1, price: 8.80 }
   ];
+
+  const [cards, setCards] = useState([]);
+
+  const handleAddCard = (newCardData) => {
+    setCards([...cards, newCardData]);
+  };
 
   return (
     <div className="app">
@@ -41,7 +48,7 @@ function App() {
       {/* Notes Component */}
       {/* <Notes />    */}
       
-      <div className="property-card-container">
+      {/* <div className="property-card-container">
 
       <PropertyCard
         imageUrl="./src/assets/PropertyCard.avif"
@@ -63,8 +70,22 @@ function App() {
       />
 
       </div>
-      
+       */}
 
+      <DynamicPropertyCard onAdd={handleAddCard} />
+      <div className="property-card-container">
+            {cards.map((card, index) => (
+              
+              <PropertyCard
+                key={index}
+                imageUrl={card.imageUrl}
+                address={card.address}
+                priceRange={card.priceRange}
+                score={card.score}
+              />
+             
+            ))}
+      </div>
 
     </div>
 

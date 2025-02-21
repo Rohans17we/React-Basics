@@ -22,7 +22,6 @@
   display: flex;
   justify-content: center; /* Center horizontally */
   padding: 40px; /* Add padding around the card */
-  background-color: #f0f8ff; /* Light background for the container */
   align-items: center; /* Center vertically */
   padding: 1rem;
   flex-direction: column;

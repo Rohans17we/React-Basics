@@ -1,0 +1,77 @@
+/* DynamicPropertyCard.css */
+.dynamic-property-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: #333; /* Default text color */
+  }
+  
+  body.dark-mode .dynamic-property-card { /* Dark mode styles */
+    background-color: #222;
+    border-color: #555;
+    color: #eee;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+  }
+  
+  .input-section {
+    margin-bottom: 10px;
+  }
+  
+  .input-section label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  body.dark-mode .input-section label { /* Dark mode label color */
+    color: #bbb;
+  }
+  
+  .input-section input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  body.dark-mode .input-section input { /* Dark mode input styles */
+    background-color: #333;
+    border-color: #666;
+    color: #eee;
+  }
+  
+  .add-button,
+  .toggle-form-button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .toggle-form-button {
+    margin-top: 0;
+  }
+  
+  .add-button:hover,
+  .toggle-form-button:hover {
+    background-color: #5a6268;
+  }
+  
+  body.dark-mode .add-button, /* Dark mode button styles */
+  body.dark-mode .toggle-form-button {
+    background-color: #444;
+  }
+  
+  body.dark-mode .add-button:hover,
+  body.dark-mode .toggle-form-button:hover {
+    background-color: #555;
+  }

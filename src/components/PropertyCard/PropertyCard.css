@@ -2,7 +2,7 @@
 
   
   body.dark-mode .property-card-container {
-    background-color: #121212; /* Dark background for the container */
+    background-color:transparent;
   }
   
   .property-card {
