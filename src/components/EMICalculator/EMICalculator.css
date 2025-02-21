@@ -1,0 +1,172 @@
+/* EMICalculator.css */
+.emi-calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  body.dark-mode .emi-calculator-container {
+    background-color: #121212;
+  }
+  
+  .emi-calculator {
+    display: flex;
+    width: 700px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: sans-serif;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  body.dark-mode .emi-calculator {
+    background-color: #333;
+    color: #eee;
+    border-color: #555;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  .calculator-inputs {
+    flex: 1;
+    margin-right: 30px;
+  }
+  
+  .calculator-header {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  
+  .tab {
+    padding: 12px 25px;
+    border: 1px solid #ddd;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  body.dark-mode .tab {
+    background-color: #444;
+    color: #eee;
+    border-color: #555;
+  }
+  
+  .tab.active {
+    background-color: #fff;
+    border-bottom: none;
+    font-weight: 600;
+  }
+  
+  body.dark-mode .tab.active {
+    background-color: #333;
+    color: #eee;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    transition: color 0.3s; /* Smooth transition */
+  }
+  
+  body.dark-mode .input-group label {
+    color: #bbb;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+  }
+  
+  body.dark-mode .input-group input,
+  body.dark-mode .input-group select {
+    background-color: #444;
+    color: #eee;
+    border-color: #666;
+  }
+  
+  .input-group input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  
+  .info-icon {
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 3px 7px;
+    color: #777;
+    transition: border-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  body.dark-mode .info-icon {
+    border-color: #666;
+    color: #ccc;
+  }
+  
+  .result {
+    flex: 0 0 200px;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+  }
+  
+  body.dark-mode .result {
+    /* background-color: #444; */
+    border-color: #555;
+    color: #eee;
+  }
+  
+  .result strong {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #007bff;
+    margin-top: 10px;
+    transition: color 0.3s; /* Smooth transition */
+  }
+  
+  body.dark-mode .result strong {
+    color: #66b3ff;
+  }
+  
+  /* Horizontal Loan Term and Interest */
+  .input-group:nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .input-group:nth-child(4) label {
+    margin-right: 10px;
+  }
+  
+  .input-group:nth-child(4) select,
+  .input-group:nth-child(4) input[type="number"] {
+    margin-right: 10px;
+  }

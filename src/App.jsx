@@ -7,6 +7,7 @@ import ToDoApp from "./components/ToDoApp/ToDoApp";
 import Notes from "./components/Notes/Notes"; // Import the Notes component
 import PropertyCard from "./components/PropertyCard/PropertyCard";
 import DynamicPropertyCard from "./components/DynamicPropertyCard/DynamicPropertyCard";
+import EMICalculator from "./components/EMICalculator/EMICalculator";
 
 function App() {
   const accordionItems = [
@@ -72,7 +73,7 @@ function App() {
       </div>
        */}
 
-      <DynamicPropertyCard onAdd={handleAddCard} />
+      {/* <DynamicPropertyCard onAdd={handleAddCard} />
       <div className="property-card-container">
             {cards.map((card, index) => (
               
@@ -85,7 +86,10 @@ function App() {
               />
              
             ))}
-      </div>
+      </div> */}
+
+
+      <EMICalculator />
 
     </div>
 
