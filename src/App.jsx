@@ -4,11 +4,12 @@ import Accordion from "./components/Accordion/Accordion";
 import DarkModeButton from "./components/DarkModeButton/DarkModeButton";
 import CartItem from "./components/CartItem/CartItem";
 import ToDoApp from "./components/ToDoApp/ToDoApp";
-import Notes from "./components/Notes/Notes"; // Import the Notes component
+import Notes from "./components/Notes/Notes";
 import PropertyCard from "./components/PropertyCard/PropertyCard";
 import DynamicPropertyCard from "./components/DynamicPropertyCard/DynamicPropertyCard";
 import EMICalculator from "./components/EMICalculator/EMICalculator";
 import LatestCustomers from "./components/LatestCustomers/LatestCustomers";
+import ProductList from "./components/ProductList/ProductList";
 
 function App() {
   const accordionItems = [
@@ -71,8 +72,8 @@ function App() {
         score={85}
       />
 
-      </div>
-       */}
+      </div> */}
+      
 
       {/* <DynamicPropertyCard onAdd={handleAddCard} />
       <div className="property-card-container">
@@ -92,7 +93,9 @@ function App() {
 
       {/* <EMICalculator /> */}
 
-      <LatestCustomers />
+      {/* <LatestCustomers /> */}
+
+      <ProductList />
 
     </div>
 
