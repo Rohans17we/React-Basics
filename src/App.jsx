@@ -8,6 +8,7 @@ import Notes from "./components/Notes/Notes"; // Import the Notes component
 import PropertyCard from "./components/PropertyCard/PropertyCard";
 import DynamicPropertyCard from "./components/DynamicPropertyCard/DynamicPropertyCard";
 import EMICalculator from "./components/EMICalculator/EMICalculator";
+import LatestCustomers from "./components/LatestCustomers/LatestCustomers";
 
 function App() {
   const accordionItems = [
@@ -89,7 +90,9 @@ function App() {
       </div> */}
 
 
-      <EMICalculator />
+      {/* <EMICalculator /> */}
+
+      <LatestCustomers />
 
     </div>
 

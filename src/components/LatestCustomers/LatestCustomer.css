@@ -1,0 +1,92 @@
+/* Light Mode Styles */
+.customer-card {
+    width: 320px;
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .header h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .view-all {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+
+  }
+  
+  .customer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .customer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .customer-item:last-child {
+    border-bottom: none;
+  }
+  
+  .customer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .customer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .customer-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .customer-email {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .customer-amount {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode .customer-card {
+    background: #1e1e1e;
+    color: white;
+  }
+  
+  body.dark-mode .customer-item {
+    border-bottom: 1px solid #333;
+  }
+  
+  body.dark-mode .customer-email {
+    color: #bbb;
+  }
+  
+  body.dark-mode .view-all {
+    color: #4da6ff;
+  }
