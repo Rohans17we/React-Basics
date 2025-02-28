@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Accordion from "./components/Accordion/Accordion";
 import DarkModeButton from "./components/DarkModeButton/DarkModeButton";
 import CartItem from "./components/CartItem/CartItem";
@@ -11,6 +11,9 @@ import EMICalculator from "./components/EMICalculator/EMICalculator";
 import LatestCustomers from "./components/LatestCustomers/LatestCustomers";
 import ProductList from "./components/ProductList/ProductList";
 import Widgets from "./components/WidgetsUI/Widgets";
+import NFTCard from "./components/NFTCard/NFTCard";
+
+
 
 function App() {
   const accordionItems = [
@@ -30,6 +33,21 @@ function App() {
   const handleAddCard = (newCardData) => {
     setCards([...cards, newCardData]);
   };
+
+
+  const [selectedId, setSelectedId] = useState(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest(".nft-card")) {
+        setSelectedId(null); // Unselect when clicking outside
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="app">
@@ -98,7 +116,41 @@ function App() {
 
       {/* <ProductList /> */}
 
-      <Widgets />
+      {/* <Widgets /> */}
+
+      <div style={{ display: "flex", gap: "20px", padding: "20px" }}>
+      
+      {/* NFT 1 */}
+      <NFTCard
+        id={1}
+        image="/src/assets/Images/40Z_2105.w023.n001.595B.p1.595.jpg"
+        ownerAvatar="/src/assets/Images/9377250.jpg"
+        owner="581EX"
+        creatorAvatar="/src/assets/Images/7748169.jpg"
+        creator="4STY87"
+        price="5.65"
+        usdPrice="10,344"
+        isSelected={selectedId === 1}
+        onClick={() => setSelectedId(1)}
+      />
+
+      {/* NFT 2 */}
+      <NFTCard
+        id={2}
+        image="/src/assets/Images/118Z_2012.w015.n001.319B.p15.319.jpg"
+        ownerAvatar="/src/assets/Images/9377250.jpg"
+        owner="23WCFV"
+        creatorAvatar="src/assets/Images/7903563.jpg"
+        creator="ST5664"
+        price="4.65"
+        usdPrice="8,706"
+        isSelected={selectedId === 2}
+        onClick={() => setSelectedId(2)}
+      />
+
+    </div>
+
+
 
     </div>
 

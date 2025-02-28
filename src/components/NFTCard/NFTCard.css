@@ -1,0 +1,92 @@
+.nft-card {
+    width: 250px;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: .5rem;
+  }
+  
+  /* Highlight the selected NFT card */
+  .nft-card.selected {
+    border: 3px solid #00aaff;
+    box-shadow: 0px 6px 15px rgba(0, 170, 255, 0.3);
+    transform: scale(1.1);
+  }
+  
+  /* Image styling */
+  .nft-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  
+  /* Owner & Creator info */
+  .nft-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .owner, .creator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+  }
+  
+  .avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+  
+  /* Price Info */
+  .nft-price {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 2px;
+  
+  }
+  
+  /* Buttons */
+  .nft-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .view-history {
+    background: none;
+    color: black;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  /* Default "Buy Now" button is blue */
+  .buy-now {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom-right-radius: 10px;
+  }
+  
+  /* Change "Buy Now" button to black when NFT is selected */
+  .buy-now.selected-buy {
+    background: black;
+  }
+  
+  .buy-now:hover {
+    opacity: 0.8;
+  }
