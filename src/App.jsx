@@ -10,6 +10,7 @@ import DynamicPropertyCard from "./components/DynamicPropertyCard/DynamicPropert
 import EMICalculator from "./components/EMICalculator/EMICalculator";
 import LatestCustomers from "./components/LatestCustomers/LatestCustomers";
 import ProductList from "./components/ProductList/ProductList";
+import Widgets from "./components/WidgetsUI/Widgets";
 
 function App() {
   const accordionItems = [
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <div className="app">
-      <DarkModeButton />
+      {/* <DarkModeButton /> */}
 
 
       {/* <Accordion items={accordionItems} /> */}
@@ -95,7 +96,9 @@ function App() {
 
       {/* <LatestCustomers /> */}
 
-      <ProductList />
+      {/* <ProductList /> */}
+
+      <Widgets />
 
     </div>
 
