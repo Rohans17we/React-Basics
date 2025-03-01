@@ -12,6 +12,7 @@ import LatestCustomers from "./components/LatestCustomers/LatestCustomers";
 import ProductList from "./components/ProductList/ProductList";
 import Widgets from "./components/WidgetsUI/Widgets";
 import NFTCard from "./components/NFTCard/NFTCard";
+import ShoeCard from "./components/ShoeCard/ShoeCard";
 
 
 
@@ -118,9 +119,8 @@ function App() {
 
       {/* <Widgets /> */}
 
-      <div style={{ display: "flex", gap: "20px", padding: "20px" }}>
+      {/* <div style={{ display: "flex", gap: "20px", padding: "20px" }}>
       
-      {/* NFT 1 */}
       <NFTCard
         id={1}
         image="/src/assets/Images/40Z_2105.w023.n001.595B.p1.595.jpg"
@@ -134,7 +134,6 @@ function App() {
         onClick={() => setSelectedId(1)}
       />
 
-      {/* NFT 2 */}
       <NFTCard
         id={2}
         image="/src/assets/Images/118Z_2012.w015.n001.319B.p15.319.jpg"
@@ -148,7 +147,27 @@ function App() {
         onClick={() => setSelectedId(2)}
       />
 
-    </div>
+      </div> */}
+
+      <div style={{ display: "flex", flexDirection: "column", gap: "20px", padding: "20px" }}>
+      <ShoeCard 
+        image="/src/assets/Images/Nike Air Pegasus.png"
+        title="Nike Air Pegasus"
+        brand="Nike"
+        description="Your workhorse with wing returns."
+        price="180"
+        bgColor="#fbe6e7"  // Light pink background
+      />
+      
+      <ShoeCard 
+        image="/src/assets/Images/Nike ZoomX.png"
+        title="Nike ZoomX"
+        brand="Nike"
+        description="The Nike ZoomX vaporfly next% clears."
+        price="320"
+        bgColor="#e3e8f0"  // Light blue-gray background
+      />
+      </div>
 
 
 
