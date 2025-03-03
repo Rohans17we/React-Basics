@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Accordion from "./components/Accordion/Accordion";
 import DarkModeButton from "./components/DarkModeButton/DarkModeButton";
 import CartItem from "./components/CartItem/CartItem";
@@ -13,6 +14,10 @@ import ProductList from "./components/ProductList/ProductList";
 import Widgets from "./components/WidgetsUI/Widgets";
 import NFTCard from "./components/NFTCard/NFTCard";
 import ShoeCard from "./components/ShoeCard/ShoeCard";
+import MyNavbar from "./components/SimpleBootsrapHomePage/Navbar";
+import Home from "./components/SimpleBootsrapHomePage/Home";
+import Footer from "./components/SimpleBootsrapHomePage/Footer";
+
 
 
 
@@ -49,6 +54,12 @@ function App() {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+
+
+  const Projects = () => <h2 className="text-center mt-5">Projects Page</h2>;
+  const YouTube = () => <h2 className="text-center mt-5">YouTube Page</h2>;
+  const Snippets = () => <h2 className="text-center mt-5">Web Snippets Page</h2>;
+
 
   return (
     <div className="app">
@@ -119,6 +130,7 @@ function App() {
 
       {/* <Widgets /> */}
 
+      {/* NFT CARD */}
       {/* <div style={{ display: "flex", gap: "20px", padding: "20px" }}>
       
       <NFTCard
@@ -149,7 +161,9 @@ function App() {
 
       </div> */}
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "20px", padding: "20px" }}>
+
+      {/* SHOE CARD */}
+      {/* <div style={{ display: "flex", flexDirection: "column", gap: "20px", padding: "20px" }}>
       <ShoeCard 
         image="/src/assets/Images/Nike Air Pegasus.png"
         title="Nike Air Pegasus"
@@ -167,8 +181,19 @@ function App() {
         price="320"
         bgColor="#e3e8f0"  // Light blue-gray background
       />
-      </div>
+      </div> */}
 
+
+      {/* <Router>
+          <MyNavbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/youtube" element={<YouTube />} />
+            <Route path="/snippets" element={<Snippets />} />
+          </Routes>
+          <Footer />
+      </Router> */}
 
 
     </div>
