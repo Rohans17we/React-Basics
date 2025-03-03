@@ -17,6 +17,8 @@ import ShoeCard from "./components/ShoeCard/ShoeCard";
 import MyNavbar from "./components/SimpleBootsrapHomePage/Navbar";
 import Home from "./components/SimpleBootsrapHomePage/Home";
 import Footer from "./components/SimpleBootsrapHomePage/Footer";
+import TransactionCard from "./components/TransactionCard/TransactionCard";
+
 
 
 
@@ -194,6 +196,10 @@ function App() {
           </Routes>
           <Footer />
       </Router> */}
+
+    {/* <TransactionCard /> */}
+
+    <TransactionCard />
 
 
     </div>
