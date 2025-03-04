@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { FaCcVisa, FaCcMastercard, FaExchangeAlt } from "react-icons/fa";
+import { FaCcVisa, FaCcMastercard, FaCcAmex, FaExchangeAlt } from "react-icons/fa";
 
-// Styled Components
 const Container = styled.div`
   width: 600px;
   background: #fff;
@@ -61,22 +60,12 @@ const Amount = styled.span`
   color: ${(props) => (props.value >= 0 ? "#1F9254" : "#D32F2F")};
 `;
 
-const transactions = [
-  { cardType: "mastercard", cardNumber: "*4920", type: "Credit", date: "Jun 24, 2023", time: "10:00 am", status: "Verified", amount: 2890.0 },
-  { cardType: "visa", cardNumber: "*4230", type: "Debit", date: "Jun 20, 2023", time: "11:00 am", status: "Rejected", amount: -49.0 },
-  { cardType: "visa", cardNumber: "*5510", type: "Debit", date: "Jun 19, 2023", time: "2:00 pm", status: "Pending", amount: -80.0 },
-  { cardType: "visa", cardNumber: "*0983", type: "Debit", date: "Jun 18, 2023", time: "11:00 am", status: "Verified", amount: -30.0 },
-  { cardType: "mastercard", cardNumber: "*4443", type: "Credit", date: "Jun 17, 2023", time: "10:00 am", status: "Verified", amount: 1500.0 },
-  { cardType: "visa", cardNumber: "*7635", type: "Debit", date: "Jun 14, 2023", time: "9:00 am", status: "Rejected", amount: -200.0 },
-];
-
-const TransactionCard = () => {
+const TransactionCard = ({ transactions }) => {
   return (
     <Container>
       <Title>Recent Transactions</Title>
       <Subtitle>Transactions overview</Subtitle>
       <Table>
-        {/* Table Header */}
         <HeaderRow>
           <Column flex={1.5}>Card</Column>
           <Column flex={2}>Date</Column>
@@ -84,11 +73,17 @@ const TransactionCard = () => {
           <Column flex={1}>Amount ($)</Column>
         </HeaderRow>
 
-        {/* Transactions */}
         {transactions.map((txn, index) => (
           <Row key={index}>
             <Column flex={1.5} bold>
-              {txn.cardType === "visa" ? <FaCcVisa color="#1A1F71" size={24} /> : <FaCcMastercard color="#EB001B" size={24} />} {txn.cardNumber}
+              {txn.cardType === "visa" ? (
+                <FaCcVisa color="#1A1F71" size={24} />
+              ) : txn.cardType === "mastercard" ? (
+                <FaCcMastercard color="#EB001B" size={24} />
+              ) : txn.cardType === "amex" ? (
+                <FaCcAmex color="#007bc1" size={24} />
+              ) : null}{" "}
+              {txn.cardNumber}
               <br />
               <span style={{ fontSize: "12px", color: "gray", display: "flex", alignItems: "center", gap: "5px" }}>
                 <FaExchangeAlt size={12} color={txn.type === "Credit" ? "#1F9254" : "#D32F2F"} />

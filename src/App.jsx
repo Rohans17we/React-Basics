@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Accordion from "./components/Accordion/Accordion";
 import DarkModeButton from "./components/DarkModeButton/DarkModeButton";
 import CartItem from "./components/CartItem/CartItem";
-import ToDoApp from "./components/ToDoApp/ToDoApp";
 import Notes from "./components/Notes/Notes";
 import PropertyCard from "./components/PropertyCard/PropertyCard";
 import DynamicPropertyCard from "./components/DynamicPropertyCard/DynamicPropertyCard";
@@ -18,6 +17,7 @@ import MyNavbar from "./components/SimpleBootsrapHomePage/Navbar";
 import Home from "./components/SimpleBootsrapHomePage/Home";
 import Footer from "./components/SimpleBootsrapHomePage/Footer";
 import TransactionCard from "./components/TransactionCard/TransactionCard";
+import TodoList from "./components/TodoList/TodoList";
 
 
 
@@ -197,9 +197,18 @@ function App() {
           <Footer />
       </Router> */}
 
-    {/* <TransactionCard /> */}
+    {/* <TransactionCard
+        transactions={[
+          { cardType: "mastercard", cardNumber: "*4920", type: "Credit", date: "Jun 24, 2023", time: "10:00 am", status: "Verified", amount: 2890.0 },
+          { cardType: "visa", cardNumber: "*4230", type: "Debit", date: "Jun 20, 2023", time: "11:00 am", status: "Rejected", amount: -49.0 },
+          { cardType: "visa", cardNumber: "*5510", type: "Debit", date: "Jun 19, 2023", time: "2:00 pm", status: "Pending", amount: -80.0 },
+          { cardType: "amex", cardNumber: "*0983", type: "Debit", date: "Jun 18, 2023", time: "11:00 am", status: "Verified", amount: -30.0 },
+          { cardType: "mastercard", cardNumber: "*4443", type: "Credit", date: "Jun 17, 2023", time: "10:00 am", status: "Verified", amount: 1500.0 },
+          { cardType: "visa", cardNumber: "*7635", type: "Debit", date: "Jun 14, 2023", time: "9:00 am", status: "Rejected", amount: -200.0 },
+        ]}
+      /> */}
 
-    <TransactionCard />
+      <TodoList />
 
 
     </div>

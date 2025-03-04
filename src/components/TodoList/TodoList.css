@@ -1,0 +1,152 @@
+.todo-container {
+    width: 350px;
+    background: #f4f6e8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .todo-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .todo-input {
+    display: flex;
+    align-items: center;
+    background-color:white;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px;
+    gap: 5px;
+  }
+  
+  .todo-input input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    outline: none;
+
+  }
+  
+  .add-btn {
+    background: #6cbf4b;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-item input {
+    margin-right: 10px;
+  }
+  
+  .task-text {
+    flex: 1;
+    font-size: 14px;
+  }
+  
+  .completed .task-text {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .edit-btn, .delete-btn {
+    background: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .edit-btn {
+    background: #6cbf4b;
+  }
+
+  /* Fix checkbox color */
+.todo-item input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #6cbf4b;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .todo-item input[type="checkbox"]:checked {
+    background-color: #6cbf4b;
+    border-color: #6cbf4b;
+  }
+  
+  .todo-item input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: none;
+  }
+  
+  .todo-item input[type="checkbox"]:checked::after {
+    display: block;
+  }
+  
+  /* Fix input field */
+  .todo-input input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    outline: none;
+    font-size: 14px;
+    color: #333; /* Dark text */
+    background: white; /* White background */
+  }
+
+  /* Styling for the edit mode input */
+.edit-input {
+    flex: 1;
+    border: 2px solid #6cbf4b; /* Same as Add button */
+    padding: 6px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    color: #333; /* Dark text */
+    background: transparent; /* White background */
+  }
+  
+  /* Ensuring save button looks similar to add button */
+  .save-btn {
+    background: #6cbf4b;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
