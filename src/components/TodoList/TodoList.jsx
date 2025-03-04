@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaPlus, FaEdit, FaTrash, FaSave } from "react-icons/fa";
-import "./TodoList.css"; // Import CSS file
+import "./TodoList.css"; 
 
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);

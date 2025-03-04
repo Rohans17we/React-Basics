@@ -18,6 +18,7 @@ import Home from "./components/SimpleBootsrapHomePage/Home";
 import Footer from "./components/SimpleBootsrapHomePage/Footer";
 import TransactionCard from "./components/TransactionCard/TransactionCard";
 import TodoList from "./components/TodoList/TodoList";
+import RegisterForm from "./components/RegisterForm/RegisterForm";
 
 
 
@@ -208,7 +209,9 @@ function App() {
         ]}
       /> */}
 
-      <TodoList />
+      {/* <TodoList /> */}
+    
+    <RegisterForm />
 
 
     </div>
