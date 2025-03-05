@@ -19,6 +19,9 @@ import Footer from "./components/SimpleBootsrapHomePage/Footer";
 import TransactionCard from "./components/TransactionCard/TransactionCard";
 import TodoList from "./components/TodoList/TodoList";
 import RegisterForm from "./components/RegisterForm/RegisterForm";
+import ShoppingLandingPage from "./components/ShoppingLandingPage/ShoppingLandingPage";
+import Blog from "./components/ShoppingLandingPage/Blog/Blog";
+import Reviews from "./components/ShoppingLandingPage/Reviews/Reviews";
 
 
 
@@ -211,7 +214,15 @@ function App() {
 
       {/* <TodoList /> */}
     
-    <RegisterForm />
+    {/* <RegisterForm /> */}
+
+    <Router>
+      <Routes>
+        <Route path="/" element={<ShoppingLandingPage />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/reviews" element={<Reviews />} />
+      </Routes>
+    </Router>
 
 
     </div>

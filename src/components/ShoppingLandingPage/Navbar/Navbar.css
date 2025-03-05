@@ -1,0 +1,82 @@
+/* Navbar Container */
+
+.navbar {
+  background-color: white; /* Ensures visibility */
+  width: 100%; /* Makes it full width */
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+  
+  /* Logo Styling */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .shop {
+    color: black;
+  }
+  
+  .ping {
+    color: orange;
+  }
+  
+  /* Navigation Links */
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links li a:hover {
+    color: #f7941d;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  
+  
+  /* Auth Buttons */
+  .auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .login {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .signup-btn {
+    background-color: #f7941d;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signup-btn:hover {
+    background-color: darkorange;
+  }
