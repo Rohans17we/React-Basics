@@ -36,6 +36,7 @@
     list-style: none;
     gap: 25px;
     align-items: center;
+    justify-content: center;
   }
   
   .nav-links li a {

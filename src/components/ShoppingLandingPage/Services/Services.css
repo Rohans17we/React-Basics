@@ -16,6 +16,9 @@
   gap: 30px; /* ⬅ More spacing between cards */
   flex-wrap: wrap;
 }
+.services-title{
+  color: orange;
+}
 
 .service-card {
   width: 250px; /* ⬅ Square shape */
