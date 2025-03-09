@@ -2,10 +2,10 @@ import { useState } from "react";
 import "./Accordion.css";
 
 const Accordion = ({ items }) => {
-  const [openIndex, setOpenIndex] = useState(null); // Track which accordion is open
+  const [openIndex, setOpenIndex] = useState(null); 
 
   const handleAccordionClick = (index) => {
-    setOpenIndex(openIndex === index ? null : index); // Toggle state
+    setOpenIndex(openIndex === index ? null : index); 
   };
 
   return (

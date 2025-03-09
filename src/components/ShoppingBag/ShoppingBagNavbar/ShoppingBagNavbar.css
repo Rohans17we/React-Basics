@@ -1,0 +1,25 @@
+.shoppingBagNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: black;
+  color: white;
+  font-size: 16px;
+}
+
+.shoppingBagNavbar .brand {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.shoppingBagNavbar .nav-links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.shoppingBagNavbar .nav-links a:hover {
+  color: #d3d3d3;
+}

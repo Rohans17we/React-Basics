@@ -2,12 +2,15 @@
   width: 100%;
   max-width: 600px;
   margin: 20px auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .accordion {
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 10px;
   overflow: hidden;
 }
 
@@ -34,4 +37,25 @@
 
 .icon.open {
   transform: rotate(180deg);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode .accordion {
+  border: 1px solid #555;
+}
+
+body.dark-mode .accordion-header {
+  background: linear-gradient(to right, #333, #555);
+  color: #fff;
+}
+
+body.dark-mode .accordion-content {
+  background-color: #222;
+  border-top: 1px solid #555;
+  color: #ddd;
 }

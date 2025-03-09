@@ -22,7 +22,8 @@ import RegisterForm from "./components/RegisterForm/RegisterForm";
 import ShoppingLandingPage from "./components/ShoppingLandingPage/ShoppingLandingPage";
 import Blog from "./components/ShoppingLandingPage/Blog/Blog";
 import Reviews from "./components/ShoppingLandingPage/Reviews/Reviews";
-
+import QnA from "./components/QnA/QnA";
+import ShoppingBag from "./components/ShoppingBag/ShoppingBag";
 
 
 
@@ -62,9 +63,6 @@ function App() {
   }, []);
 
 
-  const Projects = () => <h2 className="text-center mt-5">Projects Page</h2>;
-  const YouTube = () => <h2 className="text-center mt-5">YouTube Page</h2>;
-  const Snippets = () => <h2 className="text-center mt-5">Web Snippets Page</h2>;
 
 
   return (
@@ -216,13 +214,17 @@ function App() {
     
     {/* <RegisterForm /> */}
 
-    <Router>
+    {/* <Router>
       <Routes>
         <Route path="/" element={<ShoppingLandingPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/reviews" element={<Reviews />} />
       </Routes>
-    </Router>
+    </Router> */}
+
+    {/* <QnA items={accordionItems}/> */}
+
+    <ShoppingBag />
 
 
     </div>

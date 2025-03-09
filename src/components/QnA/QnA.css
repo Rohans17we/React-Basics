@@ -1,0 +1,78 @@
+/* Light Mode (Default) */
+body {
+    background-color: #f5f5f5;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .qna-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .qna-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+  }
+  
+  .qna-question {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .qna-answer {
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .qna-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .qna-icon.open {
+    transform: rotate(180deg);
+  }
+  
+  .color-picker {
+    margin-bottom: 15px;
+  }
+  
+  input[type="color"] {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  
+  body.dark-mode .qna-box {
+    border: 1px solid #444;
+  }
+  
+  body.dark-mode .qna-question {
+    background-color: #333 !important;
+    color: white;
+  }
+  
+  body.dark-mode .qna-answer {
+    background-color: #222;
+    color: white;
+  }
