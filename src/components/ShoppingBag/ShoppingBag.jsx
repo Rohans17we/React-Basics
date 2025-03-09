@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ShoppingBagNavbar from "./ShoppingBagNavbar/ShoppingBagNavbar";
 import ShoppingBagCart from "./ShoppingBagCart/ShoppingBagCart";
 import "./ShoppingBag.css";
+import "./ShoppingBagNavbar/LightMode.css"
 
 const ShoppingBag = () => {
   const [products, setProducts] = useState([
@@ -54,8 +55,13 @@ const ShoppingBag = () => {
         <div className="shopping-cart">
           {products.map((product, index) => (
             <div key={product.id}>
-              <ShoppingBagCart product={product} updateQuantity={updateQuantity} removeItem={removeItem} />
-              {index !== products.length - 1 && <div className="cart-divider"></div>}
+              {index !== products.length - 1  && <div className="shoppingbagcart-divider"></div>}
+              <ShoppingBagCart 
+              product={product} 
+              updateQuantity={updateQuantity} 
+              removeItem={removeItem} />
+
+            {index === products.length - 1 && <div className="shoppingbagcart-divider"></div>}
             </div>
           ))}
         </div>

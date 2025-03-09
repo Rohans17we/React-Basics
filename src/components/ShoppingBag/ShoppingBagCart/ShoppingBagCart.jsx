@@ -5,7 +5,7 @@ import { FaTrash } from "react-icons/fa"; // Import delete icon
 const ShoppingBagCart = ({ product, updateQuantity, removeItem }) => {
   return (
     <>
-      <div className="shoppingbagcart-divider"></div> {/* Top Divider */}
+      
       <div className="shoppingbagcart-item"> 
         <img src={product.image} alt={product.name} className="shoppingbagcart-product-image" />
         <div className="shoppingbagcart-details">
@@ -23,7 +23,6 @@ const ShoppingBagCart = ({ product, updateQuantity, removeItem }) => {
           </div>
         </div>
       </div>
-      <div className="shoppingbagcart-divider"></div> {/* Bottom Divider */}
     </>
   );
 };

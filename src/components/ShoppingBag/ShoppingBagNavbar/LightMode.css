@@ -1,0 +1,80 @@
+
+body.light-mode {
+    background-color: #f9f9f9;
+    color: #222;
+  }
+  
+  body.light-mode .shoppingBagNavbar {
+    background-color: #fff;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  body.light-mode .shoppingBagNavbar .nav-links a {
+    color: #000;
+  }
+  
+  body.light-mode .shoppingBagNavbar .nav-links a:hover {
+    color: #555;
+  }
+  
+  body.light-mode .shoppingBag {
+    background: #fff;
+    color: #222;
+  }
+  
+  body.light-mode .shopping-title {
+    color: #333;
+  }
+  
+  body.light-mode .shoppingbagcart-item {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+  }
+  
+  body.light-mode .shoppingbagcart-details {
+    color: #222;
+  }
+  
+  body.light-mode .shoppingbagcart-product-price {
+    color: #c79c00;
+  }
+  
+  body.light-mode .shoppingbagcart-product-info {
+    color: #555;
+  }
+  
+  body.light-mode .shoppingbagcart-quantity-btn {
+    background: #ddd;
+    color: #222;
+  }
+  
+  body.light-mode .shoppingbagcart-quantity-btn:hover {
+    background: #bbb;
+  }
+  
+  /* Remove Button */
+  body.light-mode .shoppingbagcart-delete-btn {
+    color: #d9534f;
+  }
+  
+  body.light-mode .order-summary {
+    background: #fff;
+    color: #222;
+    border: 1px solid #ddd;
+  }
+  
+  body.light-mode .checkout-btn {
+    border: 1px solid #222;
+    color: #222;
+  }
+  
+  body.light-mode .checkout-btn:hover {
+    background: #222;
+    color: white;
+  }
+  
+  body.light-mode .cart-divider,
+  body.light-mode .shoppingbagcart-divider {
+    background: rgba(0, 0, 0, 0.2);
+  }
